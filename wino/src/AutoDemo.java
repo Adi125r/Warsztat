@@ -17,50 +17,15 @@ import javax.swing.table.TableCellRenderer;
 
 import net.sf.clipsrules.jni.*;
 
-/* TBD module qualifier with find-all-facts */
-
-/*
-
- Notes:
-
- This example creates just a single environment. If you create multiple environments,
- call the destroy method when you no longer need the environment. This will free the
- C data structures associated with the environment.
-
- clips = new Environment();
- .
- .
- .
- clips.destroy();
-
- Calling the clear, reset, load, loadFacts, run, eval, build, assertString,
- and makeInstance methods can trigger CLIPS garbage collection. If you need
- to retain access to a PrimitiveValue returned by a prior eval, assertString,
- or makeInstance call, retain it and then release it after the call is made.
-
- PrimitiveValue pv1 = clips.eval("(myFunction foo)");
- pv1.retain();
- PrimitiveValue pv2 = clips.eval("(myFunction bar)");
- .
- .
- .
- pv1.release();
-
- */
-
-public class WineDemo implements ActionListener {
+public class AutoDemo implements ActionListener {
     JFrame jfrm;
 
-    DefaultTableModel wineList;
+    DefaultTableModel autoList;
 
-
-
+    String ticket = "";
     JLabel jlab;
 
 
-
-
-    ResourceBundle wineResources;
 
     Environment clips;
 
@@ -84,14 +49,8 @@ public class WineDemo implements ActionListener {
     /************/
     /* WineDemo */
     /***********/
-    WineDemo() throws  FileNotFoundException {
-        try {
-            this.wineResources = ResourceBundle.getBundle("properties.WineResources",
-                    Locale.getDefault());
-        } catch (MissingResourceException mre) {
-            mre.printStackTrace();
-            return;
-        }
+    AutoDemo() throws  FileNotFoundException {
+
 
 
         /* =================================== */
@@ -99,7 +58,7 @@ public class WineDemo implements ActionListener {
         /* assign a layout manager to it. */
         /* =================================== */
 
-        this.jfrm = new JFrame(wineResources.getString("WineDemo"));
+        this.jfrm = new JFrame("AutoDemo");
         this.jfrm.getContentPane().setLayout(
                 new BoxLayout(this.jfrm.getContentPane(), BoxLayout.Y_AXIS));
 
@@ -127,6 +86,23 @@ public class WineDemo implements ActionListener {
         JTextArea text = new JTextArea("",5,30);
         choicesPanel.add(new JScrollPane(text));
 
+        JButton buttText = new JButton("Submit");
+        choicesPanel.add(new JScrollPane(buttText));
+
+
+
+        buttText.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ticket = text.getText();
+                System.out.println(ticket);
+                try {
+                    runAuto();
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                }
+            }
+        });
 
         this.jfrm.getContentPane().add(choicesPanel);
 
@@ -134,13 +110,13 @@ public class WineDemo implements ActionListener {
         /* Create the recommendation panel. */
         /* ================================== */
 
-        this.wineList = new DefaultTableModel();
+        this.autoList = new DefaultTableModel();
 
-        this.wineList.setDataVector(new Object[][] {},
-                new Object[] { this.wineResources.getString("WineTitle"),
-                        this.wineResources.getString("RecommendationTitle") });
+        this.autoList.setDataVector(new Object[][] {},
+                new Object[] { "WineTitle",
+                        "RecommendationTitle" });
 
-        final JTable table = new JTable(this.wineList) {
+        final JTable table = new JTable(this.autoList) {
             public boolean isCellEditable(int rowIndex, int vColIndex) {
                 return false;
             }
@@ -173,7 +149,7 @@ public class WineDemo implements ActionListener {
         this.clips.load("winedemo.clp") ;
 
         try {
-            runWine();
+            runAuto();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -200,16 +176,18 @@ public class WineDemo implements ActionListener {
             return;
 
         try {
-            runWine();
+            runAuto();
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+
     }
 
     /***********/
     /* runWine */
     /***********/
-    private void runWine() throws Exception {
+    private void runAuto() throws Exception {
         String item;
 
         if (this.isExecuting)
@@ -217,89 +195,45 @@ public class WineDemo implements ActionListener {
 
         this.clips.reset();
 
-        item = "Red";
 
-        if (item.equals("Red")) {
-            this.clips.assertString("(attribute (name preferred-color) (value red))");
-        } else if (item.equals("White")) {
-            this.clips.assertString("(attribute (name preferred-color) (value white))");
-        } else {
+        if (ticket.contains("piszczy")) {
+            System.out.println("1");
+            this.clips.assertString("(attribute (name preferred-color) (value piszczy))");
+        } else if (ticket.contains("zuzyte")) {
+            this.clips.assertString("(attribute (name preferred-color) (value zuzyte))");
+        } else if (ticket.contains("ladowanie")) {
+            this.clips.assertString("(attribute (name preferred-color) (value ladowanie))");
+        }else {
+            System.out.println("b");
             this.clips.assertString("(attribute (name preferred-color) (value unknown))");
         }
 
-        item = "";
-        if (item.equals("Light")) {
-            this.clips.assertString("(attribute (name preferred-body) (value light))");
-        } else if (item.equals("Medium")) {
-            this.clips.assertString("(attribute (name preferred-body) (value medium))");
-        } else if (item.equals("Full")) {
-            this.clips.assertString("(attribute (name preferred-body) (value full))");
+
+        if (ticket.contains("stuka")) {
+            System.out.println("2");
+            this.clips.assertString("(attribute (name preferred-body) (value stuka))");
+        } else if (ticket.contains("cisnienie")) {
+            this.clips.assertString("(attribute (name preferred-body) (value cisnienie))");
+        } else if (ticket.contains("swieci")) {
+            this.clips.assertString("(attribute (name preferred-body) (value swieci))");
         } else {
+            System.out.println("b");
             this.clips.assertString("(attribute (name preferred-body) (value unknown))");
         }
 
-        item = "";
-        if (item.equals("Dry")) {
-            this.clips.assertString("(attribute (name preferred-sweetness) (value dry))");
-        } else if (item.equals("Medium")) {
-            this.clips.assertString("(attribute (name preferred-sweetness) (value medium))");
-        } else if (item.equals("Sweet")) {
-            this.clips.assertString("(attribute (name preferred-sweetness) (value sweet))");
+
+        if (ticket.contains("obroty")) {
+            System.out.println("3");
+            this.clips.assertString("(attribute (name preferred-sweetness) (value obroty))");
+        } else if (ticket.contains("sezon")) {
+            this.clips.assertString("(attribute (name preferred-sweetness) (value sezon))");
+        } else if (ticket.contains("kreci")) {
+            this.clips.assertString("(attribute (name preferred-sweetness) (value kreci))");
         } else {
+            System.out.println("b");
             this.clips.assertString("(attribute (name preferred-sweetness) (value unknown))");
         }
 
-        item ="";
-        if (item.equals("Beef") || item.equals("Pork") || item.equals("Lamb")) {
-            this.clips.assertString("(attribute (name main-component) (value meat))");
-            this.clips.assertString("(attribute (name has-turkey) (value no))");
-        } else if (item.equals("Turkey")) {
-            this.clips.assertString("(attribute (name main-component) (value poultry))");
-            this.clips.assertString("(attribute (name has-turkey) (value yes))");
-        } else if (item.equals("Chicken") || item.equals("Duck")) {
-            this.clips.assertString("(attribute (name main-component) (value poultry))");
-            this.clips.assertString("(attribute (name has-turkey) (value no))");
-        } else if (item.equals("Fish")) {
-            this.clips.assertString("(attribute (name main-component) (value fish))");
-            this.clips.assertString("(attribute (name has-turkey) (value no))");
-        } else if (item.equals("Other")) {
-            this.clips.assertString("(attribute (name main-component) (value unknown))");
-            this.clips.assertString("(attribute (name has-turkey) (value no))");
-        } else {
-            this.clips.assertString("(attribute (name main-component) (value unknown))");
-            this.clips.assertString("(attribute (name has-turkey) (value unknown))");
-        }
-
-        item = "";
-        if (item.equals("None")) {
-            this.clips.assertString("(attribute (name has-sauce) (value no))");
-        } else if (item.equals("Spicy")) {
-            this.clips.assertString("(attribute (name has-sauce) (value yes))");
-            this.clips.assertString("(attribute (name sauce) (value spicy))");
-        } else if (item.equals("Sweet")) {
-            this.clips.assertString("(attribute (name has-sauce) (value yes))");
-            this.clips.assertString("(attribute (name sauce) (value sweet))");
-        } else if (item.equals("Cream")) {
-            this.clips.assertString("(attribute (name has-sauce) (value yes))");
-            this.clips.assertString("(attribute (name sauce) (value cream))");
-        } else if (item.equals("Other")) {
-            this.clips.assertString("(attribute (name has-sauce) (value yes))");
-            this.clips.assertString("(attribute (name sauce) (value unknown))");
-        } else {
-            this.clips.assertString("(attribute (name has-sauce) (value unknown))");
-            this.clips.assertString("(attribute (name sauce) (value unknown))");
-        }
-
-        item ="";
-        if (item.equals("Delicate")) {
-            this.clips.assertString("(attribute (name tastiness) (value delicate))");
-        } else if (item.equals("Average")) {
-            this.clips.assertString("(attribute (name tastiness) (value average))");
-        } else if (item.equals("Strong")) {
-            this.clips.assertString("(attribute (name tastiness) (value strong))");
-        } else {
-            this.clips.assertString("(attribute (name tastiness) (value unknown))");
-        }
 
         final Runnable runThread = new Runnable() {
             public void run() {
@@ -308,7 +242,7 @@ public class WineDemo implements ActionListener {
                 SwingUtilities.invokeLater(new Runnable() {
                     public void run() {
                         try {
-                            updateWines();
+                            updateAuto();
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -330,10 +264,11 @@ public class WineDemo implements ActionListener {
     // It isn't necessary to explicitly throw the ClassCastException,
     // but I wrote it to make clear that the castings might not always be right.
     // It depends on the template declarations, which in this case match with the expected value types.
-    private void updateWines() throws ClassCastException{
-        final String evalStr = "(WINES::get-wine-list)";
+    private void updateAuto() throws ClassCastException{
+        final String evalStr = "(Auto::get-list)";
         final MultifieldValue pv = (MultifieldValue) this.clips.eval(evalStr);
-        this.wineList.setRowCount(0);
+       System.out.println(pv.size());
+        this.autoList.setRowCount(0);
         int  procent =0;
         String kto ="";
         try {
@@ -341,15 +276,18 @@ public class WineDemo implements ActionListener {
                 final FactAddressValue fv = (FactAddressValue) pv.get(i);
                 final int certainty;
                 certainty = (int) ((FloatValue) fv.getFactSlot("certainty")).floatValue();
-                if (procent< certainty) {
+                System.out.println(certainty);
+
                     kto  = ((StringValue) fv.getFactSlot("value")).stringValue();
                     procent = certainty;
-                }
+                    this.autoList.addRow(new Object[] {kto , new Integer(procent) });
+
+
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        this.wineList.addRow(new Object[] {kto , new Integer(procent) });
+
 
         this.jfrm.pack();
 
@@ -369,7 +307,7 @@ public class WineDemo implements ActionListener {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    new WineDemo();
+                    new AutoDemo();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
