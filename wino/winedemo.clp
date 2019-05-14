@@ -102,29 +102,42 @@
 
   ; Rules for picking the best body
 
-  (rule
-        (then best-body is stuka with certainty 30 and
-              best-body is cisnienie with certainty 30 and
-              best-body is unknown with certainty 10 and
-              best-body is swieci with certainty 30))
-
+  (rule     (if preferred-body is stuka )
+        (then best-body is stuka with certainty 30 ))
+  (rule     (if preferred-body is cisnienie )
+          (then best-body is cisnienie with certainty 30 ))
+  (rule     (if preferred-body is swieci )
+          (then best-body is swieci  with certainty 30 ))
+  (rule        (if preferred-body is unknown )
+          (then best-body is unknown  with certainty 30 ))
 
 
   ; Rules for picking the best color
 
-  (rule
-        (then best-color is piszczy with certainty 30 and
-              best-color is zuzyte with certainty 30 and
-              best-color is unknown with certainty 10 and
-              best-color is ladowanie with certainty 30))
+ (rule      (if preferred-color is piszczy )
+         (then best-body is piszczy with certainty 30 ))
+   (rule     (if preferred-color is zuzyte )
+           (then best-body is zuzyte  with certainty 30 ))
+   (rule        (if preferred-color is ladowanie  )
+           (then best-body is  ladowanie  with certainty 30 ))
+   (rule         (if preferred-color is unknown  )
+           (then best-body is unknown  with certainty 30 ))
+
+
   
   ; Rules for picking the best sweetness
 
-  (rule
-        (then best-sweetness is obroty with certainty 30 and
-              best-sweetness is sezon with certainty 30 and
-              best-sweetness is unknown with certainty 10 and
-              best-sweetness is kreci with certainty 30))
+
+(rule      (if preferred-sweetness is obroty )
+         (then best-sweetness is obroty with certainty 30 ))
+   (rule     (if preferred-sweetness is sezon )
+           (then best-sweetness is sezon  with certainty 30 ))
+   (rule        (if preferred-sweetness is kreci  )
+           (then best-sweetness is kreci with certainty 30 ))
+   (rule         (if preferred-sweetness is unknown  )
+           (then best-sweetness is unknown  with certainty 30 ))
+
+
 
 )
 
@@ -147,12 +160,12 @@
   (multislot sweetness (default any)))
 
 (deffacts Auto::the-list
-  (auto (name "Maks") (color stuka) (body piszczy) (sweetness obroty))
-  (auto (name "Mariusz") (color cisnienie) (body zuzyte) (sweetness sezon))
+  (auto (name "Maks") (color piszczy)(body stuka)   (sweetness obroty))
+  (auto (name "Mariusz") (color zuzyte) (body cisnienie) (sweetness sezon))
   (auto (name "Ekspert") (color unknown ) (body unknown ) (sweetness unknown))
   (auto (name "Ekpert") (color unknown ) (body unknown ) (sweetness unknown))
   (auto (name "rt") (color stuka ) (body unknown ) (sweetness unknown))
-  (auto (name "Michal") (color swieci) (body ladowanie) (sweetness kreci)))
+  (auto (name "Michal") (color ladowanie) (body swieci)(sweetness kreci)))
 
   
   

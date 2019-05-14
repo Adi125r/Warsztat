@@ -2,32 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94c4ff23-4daf-49d0-8a61-0994687b4211" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wino/WineDemo$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wino/WineDemo$2$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wino/WineDemo$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wino/WineDemo$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wino/WineDemo$WeightCellRenderer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wino/WineDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wino/properties/WineResources.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wino/properties/WineResources_ar.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wino/properties/WineResources_ar.source" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wino/properties/WineResources_es.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wino/properties/WineResources_es.source" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wino/properties/WineResources_ja.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wino/properties/WineResources_ja.source" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wino/properties/WineResources_ru.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/wino/properties/WineResources_ru.source" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WineDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AutoDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/properties/WineResources.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/properties/WineResources_ar.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/properties/WineResources_ar.source" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/properties/WineResources_es.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/properties/WineResources_es.source" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/properties/WineResources_ja.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/properties/WineResources_ja.source" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/properties/WineResources_ru.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/properties/WineResources_ru.source" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/winedemo.clp" beforeDir="false" afterPath="$PROJECT_DIR$/winedemo.clp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -42,26 +16,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AutoDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="274" column="49" selection-start-line="274" selection-start-column="49" selection-end-line="274" selection-end-column="49" />
+            <state relative-caret-position="-248">
+              <caret line="200" column="61" lean-forward="true" selection-start-line="200" selection-start-column="61" selection-end-line="200" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4943#4944#0" expanded="true" />
-                <element signature="e#4987#4988#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/winedemo.clp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-266">
-              <caret line="124" column="59" lean-forward="true" selection-start-line="124" selection-start-column="59" selection-end-line="124" selection-end-column="59" />
+            <state relative-caret-position="-106">
+              <caret line="139" selection-start-line="139" selection-end-line="139" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/wino/winedemo.clp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1554" />
           </provider>
         </entry>
       </file>
@@ -81,16 +60,16 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/WineDemo.java" />
-        <option value="$PROJECT_DIR$/winedemo.clp" />
         <option value="$PROJECT_DIR$/src/AutoDemo.java" />
+        <option value="$PROJECT_DIR$/winedemo.clp" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-12" />
-    <option name="y" value="-12" />
-    <option name="width" value="1944" />
-    <option name="height" value="1044" />
+    <option name="x" value="-1918" />
+    <option name="y" value="-106" />
+    <option name="width" value="1940" />
+    <option name="height" value="1030" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -98,6 +77,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -132,7 +112,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -200,9 +179,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="-1032" y="-121" width="1040" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15384616" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19693878" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -212,7 +192,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3285968" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30278233" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -233,35 +213,30 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/properties/WineResources_es.source">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/properties/WineResources_ar.source">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/properties/WineResources_ja.source">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/properties/WineResources_ru.source">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/properties/WineResources_es.source" />
+    <entry file="file://$PROJECT_DIR$/src/properties/WineResources_ar.source" />
+    <entry file="file://$PROJECT_DIR$/src/properties/WineResources_ja.source" />
+    <entry file="file://$PROJECT_DIR$/src/properties/WineResources_ru.source" />
     <entry file="file://$PROJECT_DIR$/out/production/wino/winedemo.clp" />
-    <entry file="file://$PROJECT_DIR$/src/AutoDemo.java">
+    <entry file="file://$PROJECT_DIR$/winedemo.clp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="274" column="49" selection-start-line="274" selection-start-column="49" selection-end-line="274" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4943#4944#0" expanded="true" />
-            <element signature="e#4987#4988#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-106">
+          <caret line="139" selection-start-line="139" selection-end-line="139" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/winedemo.clp">
+    <entry file="file://$USER_HOME$/Desktop/wino/winedemo.clp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-266">
-          <caret line="124" column="59" lean-forward="true" selection-start-line="124" selection-start-column="59" selection-end-line="124" selection-end-column="59" />
+        <state relative-caret-position="-1554" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AutoDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-248">
+          <caret line="200" column="61" lean-forward="true" selection-start-line="200" selection-start-column="61" selection-end-line="200" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
