@@ -115,13 +115,13 @@
   ; Rules for picking the best color
 
  (rule      (if preferred-color is piszczy )
-         (then best-body is piszczy with certainty 30 ))
+         (then best-color is piszczy with certainty 30 ))
    (rule     (if preferred-color is zuzyte )
-           (then best-body is zuzyte  with certainty 30 ))
+           (then best-color is zuzyte  with certainty 30 ))
    (rule        (if preferred-color is ladowanie  )
-           (then best-body is  ladowanie  with certainty 30 ))
+           (then best-color is  ladowanie  with certainty 30 ))
    (rule         (if preferred-color is unknown  )
-           (then best-body is unknown  with certainty 30 ))
+           (then best-color is unknown  with certainty 30 ))
 
 
   
@@ -164,7 +164,7 @@
   (auto (name "Mariusz") (color zuzyte) (body cisnienie) (sweetness sezon))
   (auto (name "Ekspert") (color unknown ) (body unknown ) (sweetness unknown))
   (auto (name "Ekpert") (color unknown ) (body unknown ) (sweetness unknown))
-  (auto (name "rt") (color stuka ) (body unknown ) (sweetness unknown))
+  (auto (name "rt") (color piszczy ) (body unknown ) (sweetness unknown))
   (auto (name "Michal") (color ladowanie) (body swieci)(sweetness kreci)))
 
   
