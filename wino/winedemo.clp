@@ -1,9 +1,4 @@
 
-;;;======================================================
-;;;   Auto Expert Sample Problem
-;;;
-;;;======================================================
-
 (defmodule MAIN (export ?ALL))
 
 ;;*****************
@@ -19,7 +14,7 @@
   (declare (salience 10000))
   =>
   (set-fact-duplication TRUE)
-  (focus CHOOSE-QUALITIES Auto))
+  (focus CHOOSE-QUALITIES WINES))
 
 (defrule MAIN::combine-certainties ""
   (declare (salience 100)
@@ -98,46 +93,119 @@
 
 (defrule CHOOSE-QUALITIES::startit => (focus RULES))
 
-(deffacts the-rules
+(deffacts the-wine-rules
 
   ; Rules for picking the best body
 
-  (rule     (if preferred-body is stuka )
-        (then best-body is stuka with certainty 30 ))
-  (rule     (if preferred-body is cisnienie )
-          (then best-body is cisnienie with certainty 30 ))
-  (rule     (if preferred-body is swieci )
-          (then best-body is swieci  with certainty 30 ))
-  (rule        (if preferred-body is unknown )
-          (then best-body is unknown  with certainty 30 ))
 
+  (rule (if has-sauce is yes and 
+            sauce is skrzynia)
+        (then best-body is hamulce))
+
+  (rule (if tastiness is opona)
+        (then best-body is silnik))
+
+  (rule (if tastiness is uklad)
+        (then best-body is silnik with certainty 30 and
+              best-body is reflektor with certainty 60 and
+              best-body is hamulce with certainty 30))
+
+  (rule (if tastiness is skrzynia)
+        (then best-body is reflektor with certainty 40 and
+              best-body is hamulce with certainty 80))
+
+  (rule (if has-sauce is yes and
+            sauce is elektryka)
+        (then best-body is reflektor with certainty 40 and
+              best-body is hamulce with certainty 60))
+
+  (rule (if preferred-body is hamulce)
+        (then best-body is hamulce with certainty 40))
+
+  (rule (if preferred-body is reflektor)
+        (then best-body is reflektor with certainty 40))
+
+  (rule (if preferred-body is silnik)
+        (then best-body is silnik with certainty 40))
+
+  (rule (if preferred-body is silnik and
+            best-body is hamulce)
+        (then best-body is reflektor))
+
+  (rule (if preferred-body is hamulce and
+            best-body is silnik)
+        (then best-body is reflektor))
+
+  (rule (if preferred-body is unknown) 
+        (then best-body is silnik with certainty 20 and
+              best-body is reflektor with certainty 20 and
+              best-body is hamulce with certainty 20))
 
   ; Rules for picking the best color
 
- (rule      (if preferred-color is piszczy )
-         (then best-color is piszczy with certainty 30 ))
-   (rule     (if preferred-color is zuzyte )
-           (then best-color is zuzyte  with certainty 30 ))
-   (rule        (if preferred-color is ladowanie  )
-           (then best-color is  ladowanie  with certainty 30 ))
-   (rule         (if preferred-color is unknown  )
-           (then best-color is unknown  with certainty 30 ))
+  (rule (if main-component is meat)
+        (then best-color is opona with certainty 90))
 
+  (rule (if main-component is poultry and
+            has-turkey is no)
+        (then best-color is sprzeglo with certainty 90 and
+              best-color is opona with certainty 30))
 
+  (rule (if main-component is poultry and
+            has-turkey is yes)
+        (then best-color is opona with certainty 80 and
+              best-color is sprzeglo with certainty 50))
+
+  (rule (if main-component is klocki)
+        (then best-color is sprzeglo))
+
+  (rule (if main-component is-not klocki and
+            has-sauce is yes and
+            sauce is tomato)
+        (then best-color is opona))
+
+  (rule (if has-sauce is yes and
+            sauce is elektryka)
+        (then best-color is sprzeglo with certainty 40))
+                   
+  (rule (if preferred-color is opona)
+        (then best-color is opona with certainty 40))
+
+  (rule (if preferred-color is sprzeglo)
+        (then best-color is sprzeglo with certainty 40))
+
+  (rule (if preferred-color is unknown)
+        (then best-color is opona with certainty 20 and
+              best-color is sprzeglo with certainty 20))
   
   ; Rules for picking the best sweetness
 
+  (rule (if has-sauce is yes and
+            sauce is klocki)
+        (then best-sweetness is klocki with certainty 90 and
+              best-sweetness is reflektor with certainty 40))
 
-(rule      (if preferred-sweetness is obroty )
-         (then best-sweetness is obroty with certainty 30 ))
-   (rule     (if preferred-sweetness is sezon )
-           (then best-sweetness is sezon  with certainty 30 ))
-   (rule        (if preferred-sweetness is kreci  )
-           (then best-sweetness is kreci with certainty 30 ))
-   (rule         (if preferred-sweetness is unknown  )
-           (then best-sweetness is unknown  with certainty 30 ))
+  (rule (if preferred-sweetness is hamulce)
+        (then best-sweetness is hamulce with certainty 40))
 
+  (rule (if preferred-sweetness is reflektor)
+        (then best-sweetness is reflektor with certainty 40))
 
+  (rule (if preferred-sweetness is klocki)
+        (then best-sweetness is klocki with certainty 40))
+
+  (rule (if best-sweetness is klocki and
+            preferred-sweetness is hamulce)
+        (then best-sweetness is reflektor))
+
+  (rule (if best-sweetness is hamulce and
+            preferred-sweetness is klocki)
+        (then best-sweetness is reflektor))
+
+  (rule (if preferred-sweetness is unknown)
+        (then best-sweetness is hamulce with certainty 20 and
+              best-sweetness is reflektor with certainty 20 and
+              best-sweetness is klocki with certainty 20))
 
 )
 
@@ -145,33 +213,39 @@
 ;;* WINE SELECTION RULES *
 ;;************************
 
-(defmodule Auto (import MAIN ?ALL)
-                 (export deffunction get-list))
+(defmodule WINES (import MAIN ?ALL)
+                 (export deffunction get-wine-list))
 
 (deffacts any-attributes
   (attribute (name best-color) (value any))
   (attribute (name best-body) (value any))
   (attribute (name best-sweetness) (value any)))
 
-(deftemplate Auto::auto
+(deftemplate WINES::wine
   (slot name (default ?NONE))
   (multislot color (default any))
   (multislot body (default any))
   (multislot sweetness (default any)))
 
-(deffacts Auto::the-list
-  (auto (name "Maks") (color piszczy)(body stuka)   (sweetness obroty))
-  (auto (name "Makssss") (color piszczy)(body unknown)   (sweetness obroty))
-  (auto (name "Mariusz") (color zuzyte) (body cisnienie) (sweetness sezon))
-  (auto (name "Ekspert") (color unknown ) (body unknown ) (sweetness unknown))
-  (auto (name "Ekpert") (color unknown ) (body unknown ) (sweetness unknown))
-  (auto (name "rt") (color unknown ) (body stuka ) (sweetness unknown))
-  (auto (name "Michal") (color ladowanie) (body swieci)(sweetness kreci)))
-
+(deffacts WINES::the-wine-list 
+  (wine (name "Mariusz") (color opona) (body reflektor) (sweetness reflektor klocki))
+  (wine (name "Max") (color sprzeglo) (body silnik) (sweetness hamulce))
+  (wine (name "Max") (color sprzeglo) (body reflektor) (sweetness hamulce))
+  (wine (name "Michal") (color sprzeglo) (body reflektor hamulce) (sweetness reflektor hamulce))
+  (wine (name "Michal") (color sprzeglo) (body silnik) (sweetness reflektor hamulce))
+  (wine (name "Mariusz") (color sprzeglo) (body silnik reflektor) (sweetness reflektor klocki))
+  (wine (name "Max") (color sprzeglo) (body hamulce))
+  (wine (name "Max") (color sprzeglo) (body silnik) (sweetness reflektor klocki))
+  (wine (name "Michal") (color opona) (body silnik))
+  (wine (name "Max") (color opona) (sweetness hamulce reflektor))
+  (wine (name "Max") (color opona) (sweetness hamulce reflektor))
+  (wine (name "Mariusz") (color opona) (body reflektor) (sweetness reflektor))
+  (wine (name "Michal") (color opona) (body hamulce))
+  (wine (name "Max") (color opona) (sweetness hamulce reflektor)))
   
   
-(defrule Auto::generate-auto
-  (auto (name ?name)
+(defrule WINES::generate-wines
+  (wine (name ?name)
         (color $? ?c $?)
         (body $? ?b $?)
         (sweetness $? ?s $?))
@@ -179,17 +253,17 @@
   (attribute (name best-body) (value ?b) (certainty ?certainty-2))
   (attribute (name best-sweetness) (value ?s) (certainty ?certainty-3))
   =>
-  (assert (attribute (name auto) (value ?name)
+  (assert (attribute (name wine) (value ?name)
                      (certainty (min ?certainty-1 ?certainty-2 ?certainty-3)))))
 
-(deffunction Auto::auto-sort (?w1 ?w2)
+(deffunction WINES::wine-sort (?w1 ?w2)
    (< (fact-slot-value ?w1 certainty)
       (fact-slot-value ?w2 certainty)))
       
-(deffunction Auto::get-list()
+(deffunction WINES::get-wine-list ()
   (bind ?facts (find-all-facts ((?f attribute))
-                               (and (eq ?f:name auto)
-                                    (>= ?f:certainty 0))))
-  (sort auto-sort ?facts))
+                               (and (eq ?f:name wine)
+                                    (>= ?f:certainty 20))))
+  (sort wine-sort ?facts))
   
 

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="94c4ff23-4daf-49d0-8a61-0994687b4211" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/AutoDemo.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/WarsztatDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="200" column="61" selection-start-line="200" selection-start-column="61" selection-end-line="200" selection-end-column="61" />
+            <state relative-caret-position="2091">
+              <caret line="143" column="57" selection-start-line="143" selection-start-column="57" selection-end-line="143" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -26,11 +27,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/winedemo.clp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="613">
-              <caret line="179" column="53" selection-start-line="179" selection-start-column="53" selection-end-line="179" selection-end-column="53" />
+            <state relative-caret-position="476">
+              <caret line="109" column="53" selection-start-line="109" selection-start-column="53" selection-end-line="109" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/JRC.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -44,23 +57,57 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>runWine</find>
+      <find>main</find>
+      <find>light</find>
+      <find>ticke</find>
+      <find>none</find>
+      <find>turkey</find>
+      <find>spicy</find>
+      <find>has-sauce</find>
+      <find>clips</find>
+      <find>unknown</find>
+      <find>ad</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/JiraAp.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/WineDemo.java" />
-        <option value="$PROJECT_DIR$/src/AutoDemo.java" />
+        <option value="$PROJECT_DIR$/src/JRC.java" />
+        <option value="$PROJECT_DIR$/src/WarsztatDemo.java" />
         <option value="$PROJECT_DIR$/winedemo.clp" />
       </list>
     </option>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="jrjc" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="jrjc" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
+    <option name="x" value="-220" />
     <option name="y" value="-10" />
-    <option name="width" value="1939" />
-    <option name="height" value="1049" />
+    <option name="width" value="1940" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -68,31 +115,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="wino" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wino" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wino" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wino" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wino" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wino" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wino" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wino" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
               <item name="wino" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -110,18 +139,20 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../jiraClient/jira-rest-java-client-4.0.0/jira-rest-java-client-core-4.0.0.jar!/" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Studia\Sem6\Projekt zespołowy\Warsztat-master\wino" />
+      <recent name="C:\Users\adimo\OneDrive\Desktop\wino\out\production\wino\properties" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\adimo\OneDrive\Desktop\wino\out\production\wino" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\adimo\OneDrive\Desktop\wino\out\production\wino\properties" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -136,16 +167,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.AutoDemo">
-    <configuration name="AutoDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="AutoDemo" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="JRC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JRC" />
       <module name="wino" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WineDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="WineDemo" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="wino" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WarsztatDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="WarsztatDemo" />
       <module name="wino" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -153,8 +191,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AutoDemo" />
-        <item itemvalue="Application.WineDemo" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.WarsztatDemo" />
+        <item itemvalue="Application.JRC" />
       </list>
     </recent_temporary>
   </component>
@@ -168,19 +207,30 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1557073321149</updated>
-      <workItem from="1557856587744" duration="563000" />
-      <workItem from="1557955588937" duration="39000" />
+      <workItem from="1557087961441" duration="2525000" />
+      <workItem from="1557167609835" duration="2855000" />
+      <workItem from="1557246793617" duration="2072000" />
+      <workItem from="1557249312622" duration="978000" />
+      <workItem from="1557250424855" duration="1888000" />
+      <workItem from="1557253397512" duration="145000" />
+      <workItem from="1557255907970" duration="11280000" />
+      <workItem from="1557299059167" duration="6791000" />
+      <workItem from="1557314766771" duration="3101000" />
+      <workItem from="1557498975334" duration="690000" />
+      <workItem from="1558963008214" duration="941000" />
+      <workItem from="1558983931080" duration="608000" />
+      <workItem from="1559074228049" duration="5495000" />
+      <workItem from="1559080579762" duration="1000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="602000" />
+    <option name="totallyTimeSpent" value="39370000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20201342" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17449665" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -189,54 +239,101 @@
       <window_info id="Learn" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30169973" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49932885" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.73624164" weight="0.24220963" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49798658" weight="0.23229462" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="ConsoleMavenPlugin" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3285968" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3286119" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.2637584" side_tool="true" weight="0.24220963" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4899329" weight="0.32577905" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Spring" order="14" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.24966443" />
+      <window_info anchor="right" id="Maven" order="8" weight="0.32885906" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/properties/WineResources_es.source" />
-    <entry file="file://$PROJECT_DIR$/src/properties/WineResources_ar.source" />
-    <entry file="file://$PROJECT_DIR$/src/properties/WineResources_ja.source" />
-    <entry file="file://$PROJECT_DIR$/src/properties/WineResources_ru.source" />
+    <entry file="file://$PROJECT_DIR$/src/properties/WineResources_es.source">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/properties/WineResources_ar.source">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/properties/WineResources_ja.source">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/properties/WineResources_ru.source">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/out/production/wino/winedemo.clp" />
-    <entry file="file://$USER_HOME$/Desktop/wino/winedemo.clp" />
-    <entry file="file://$PROJECT_DIR$/winedemo.clp">
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="613">
-          <caret line="179" column="53" selection-start-line="179" selection-start-column="53" selection-end-line="179" selection-end-column="53" />
+        <state relative-caret-position="-13">
+          <caret line="988" selection-start-line="988" selection-end-line="988" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AutoDemo.java">
+    <entry file="file://$PROJECT_DIR$/src/JiraAp.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="200" column="61" selection-start-line="200" selection-start-column="61" selection-end-line="200" selection-end-column="61" />
+        <state relative-caret-position="170">
+          <caret line="40" column="20" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WarsztatDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2091">
+          <caret line="143" column="57" selection-start-line="143" selection-start-column="57" selection-end-line="143" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JRC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/winedemo.clp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="109" column="53" selection-start-line="109" selection-start-column="53" selection-end-line="109" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -257,6 +354,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
+          <last-edited>Spring</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -279,7 +377,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>1.8.0_191</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
