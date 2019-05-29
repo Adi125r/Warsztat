@@ -196,42 +196,37 @@ public class AutoDemo implements ActionListener {
         this.clips.reset();
 
 
-        if (ticket.contains("piszczy")) {
-            System.out.println("1");
-            this.clips.assertString("(attribute (name preferred-color) (value piszczy))");
-        } else if (ticket.contains("zuzyte")) {
-            this.clips.assertString("(attribute (name preferred-color) (value zuzyte))");
-        } else if (ticket.contains("ladowanie")) {
-            this.clips.assertString("(attribute (name preferred-color) (value ladowanie))");
+        if (ticket.contains("knocks")) {
+           this.clips.assertString("(attribute (name preferred-mechanic) (value knocks))");
+        } else if (ticket.contains("squeaks")) {
+            this.clips.assertString("(attribute (name preferred-mechanic) (value squeaks))");
+        } else if (ticket.contains("engine speed")) {
+            this.clips.assertString("(attribute (name preferred-mechanic) (value engine speed))");
         }else {
-            System.out.println("b");
-            this.clips.assertString("(attribute (name preferred-color) (value unknown))");
+
+            this.clips.assertString("(attribute (name preferred-mechanic) (value unknown))");
         }
 
 
-        if (ticket.contains("stuka")) {
-            System.out.println("2");
-            this.clips.assertString("(attribute (name preferred-body) (value stuka))");
-        } else if (ticket.contains("cisnienie")) {
-            this.clips.assertString("(attribute (name preferred-body) (value cisnienie))");
-        } else if (ticket.contains("swieci")) {
-            this.clips.assertString("(attribute (name preferred-body) (value swieci))");
+        if (ticket.contains("used")) {
+           this.clips.assertString("(attribute (name preferred-vulcanizer) (value used))");
+        } else if (ticket.contains("season")) {
+            this.clips.assertString("(attribute (name preferred-vulcanizer) (value season))");
+        } else if (ticket.contains("pressure")) {
+            this.clips.assertString("(attribute (name preferred-vulcanizer) (value pressure))");
         } else {
-            System.out.println("b");
-            this.clips.assertString("(attribute (name preferred-body) (value unknown))");
+         this.clips.assertString("(attribute (name preferred-vulcanizer) (value unknown))");
         }
 
 
-        if (ticket.contains("obroty")) {
-            System.out.println("3");
-            this.clips.assertString("(attribute (name preferred-sweetness) (value obroty))");
-        } else if (ticket.contains("sezon")) {
-            this.clips.assertString("(attribute (name preferred-sweetness) (value sezon))");
-        } else if (ticket.contains("kreci")) {
-            this.clips.assertString("(attribute (name preferred-sweetness) (value kreci))");
+        if (ticket.contains("landing")) {
+          this.clips.assertString("(attribute (name preferred-electrician) (value landing))");
+        } else if (ticket.contains("turns")) {
+            this.clips.assertString("(attribute (name preferred-electrician) (value turns))");
+        } else if (ticket.contains("shines")) {
+            this.clips.assertString("(attribute (name preferred-electrician) (value shines))");
         } else {
-            System.out.println("b");
-            this.clips.assertString("(attribute (name preferred-sweetness) (value unknown))");
+            this.clips.assertString("(attribute (name preferred-electrician) (value unknown))");
         }
 
 

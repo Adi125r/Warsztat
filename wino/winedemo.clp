@@ -100,42 +100,42 @@
 
 (deffacts the-rules
 
-  ; Rules for picking the best body
+  ; Rules for picking the best mechanic
 
-  (rule     (if preferred-body is stuka )
-        (then best-body is stuka with certainty 30 ))
-  (rule     (if preferred-body is cisnienie )
-          (then best-body is cisnienie with certainty 30 ))
-  (rule     (if preferred-body is swieci )
-          (then best-body is swieci  with certainty 30 ))
-  (rule        (if preferred-body is unknown )
-          (then best-body is unknown  with certainty 30 ))
+  (rule     (if preferred-mechanic is knocks )
+        (then best-mechanic is knocks with certainty 30 ))
+  (rule     (if preferred-mechanic is squeaks)
+          (then best-mechanic is squeaks with certainty 30 ))
+  (rule     (if preferred-mechanic is engine_speed )
+          (then best-mechanic is engine_speed  with certainty 30 ))
+  (rule        (if preferred-mechanic is unknown )
+          (then best-mechanic is unknown  with certainty 30 ))
 
 
-  ; Rules for picking the best color
+  ; Rules for picking the best vulcanizer
 
- (rule      (if preferred-color is piszczy )
-         (then best-color is piszczy with certainty 30 ))
-   (rule     (if preferred-color is zuzyte )
-           (then best-color is zuzyte  with certainty 30 ))
-   (rule        (if preferred-color is ladowanie  )
-           (then best-color is  ladowanie  with certainty 30 ))
-   (rule         (if preferred-color is unknown  )
-           (then best-color is unknown  with certainty 30 ))
+ (rule      (if preferred-vulcanizer is used)
+         (then best-vulcanizer is used with certainty 30 ))
+   (rule     (if preferred-vulcanizer is season )
+           (then best-vulcanizer is season  with certainty 30 ))
+   (rule        (if preferred-vulcanizer is pressure  )
+           (then best-vulcanizer is  pressure with certainty 30 ))
+   (rule         (if preferred-vulcanizer is unknown  )
+           (then best-vulcanizer is unknown  with certainty 30 ))
 
 
   
-  ; Rules for picking the best sweetness
+  ; Rules for picking the best electrician
 
 
-(rule      (if preferred-sweetness is obroty )
-         (then best-sweetness is obroty with certainty 30 ))
-   (rule     (if preferred-sweetness is sezon )
-           (then best-sweetness is sezon  with certainty 30 ))
-   (rule        (if preferred-sweetness is kreci  )
-           (then best-sweetness is kreci with certainty 30 ))
-   (rule         (if preferred-sweetness is unknown  )
-           (then best-sweetness is unknown  with certainty 30 ))
+(rule      (if preferred-electrician is landing )
+         (then best-electrician is landing with certainty 30 ))
+   (rule     (if preferred-electrician is turns  )
+           (then best-electrician is turns   with certainty 30 ))
+   (rule        (if preferred-electrician is shines  )
+           (then best-electrician is shines with certainty 30 ))
+   (rule         (if preferred-electrician is unknown  )
+           (then best-electrician is unknown  with certainty 30 ))
 
 
 
@@ -149,34 +149,45 @@
                  (export deffunction get-list))
 
 (deffacts any-attributes
-  (attribute (name best-color) (value any))
-  (attribute (name best-body) (value any))
-  (attribute (name best-sweetness) (value any)))
+  (attribute (name best-mechanic) (value any))
+  (attribute (name best-vulcanizer) (value any))
+  (attribute (name best-electrician) (value any)))
 
 (deftemplate Auto::auto
   (slot name (default ?NONE))
-  (multislot color (default any))
-  (multislot body (default any))
-  (multislot sweetness (default any)))
+  (multislot mechanic (default any))
+  (multislot vulcanizer (default any))
+  (multislot electrician (default any)))
 
 (deffacts Auto::the-list
-  (auto (name "Maks") (color piszczy)(body stuka)   (sweetness obroty))
-  (auto (name "Mariusz") (color zuzyte) (body cisnienie) (sweetness sezon))
-  (auto (name "Ekspert") (color unknown ) (body unknown ) (sweetness unknown))
-  (auto (name "Ekpert") (color unknown ) (body unknown ) (sweetness unknown))
-  (auto (name "rt") (color piszczy ) (body unknown ) (sweetness unknown))
-  (auto (name "Michal") (color ladowanie) (body swieci)(sweetness kreci)))
+  (auto (name "Maks") (mechanic knocks)(vulcanizer unknown ) (electrician unknown))
+  (auto (name "Maks") (mechanic squeaks)(vulcanizer unknown ) (electrician unknown))
+  (auto (name "Maks") (mechanic engine_speed )(vulcanizer unknown ) (electrician unknown))
 
-  
+  (auto (name "Mariusz") (mechanic unknown )(vulcanizer used) (electrician unknown))
+  (auto (name "Mariusz") (mechanic unknown )(vulcanizer season ) (electrician unknown))
+  (auto (name "Mariusz") (mechanic unknown )(vulcanizer pressure ) (electrician unknown))
+
+  (auto (name "Michal") (mechanic unknown )(vulcanizer unknown) (electrician landing ))
+  (auto (name "Michal") (mechanic unknown )(vulcanizer unknown) (electrician turns ))
+  (auto (name "Michal") (mechanic unknown )(vulcanizer unknown) (electrician shines ))
+
+  (auto (name "Ekpert") (mechanic unknown )(vulcanizer unknown) (electrician unknown))
+
+
+  (auto (name "Ekpert") (mechanic knocks)(vulcanizer used ) (electrician landing))
+  (auto (name "Ekpert") (mechanic  squeaks)(vulcanizer season) (electrician turns))
+  (auto (name "Ekpert") (mechanic  engine_speed)(vulcanizer pressure) (electrician shines)))
+
   
 (defrule Auto::generate-auto
   (auto (name ?name)
-        (color $? ?c $?)
-        (body $? ?b $?)
-        (sweetness $? ?s $?))
-  (attribute (name best-color) (value ?c) (certainty ?certainty-1))
-  (attribute (name best-body) (value ?b) (certainty ?certainty-2))
-  (attribute (name best-sweetness) (value ?s) (certainty ?certainty-3))
+        (mechanic $? ?c $?)
+        (vulcanizer $? ?b $?)
+        (electrician $? ?s $?))
+  (attribute (name best-mechanic) (value ?c) (certainty ?certainty-1))
+  (attribute (name best-vulcanizer) (value ?b) (certainty ?certainty-2))
+  (attribute (name best-electrician) (value ?s) (certainty ?certainty-3))
   =>
   (assert (attribute (name auto) (value ?name)
                      (certainty (min ?certainty-1 ?certainty-2 ?certainty-3)))))
